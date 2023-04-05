@@ -25,11 +25,24 @@ export default defineConfig({
   }*/
 
   build: {
-    lib: {
-      entry: resolve(__dirname, 'src/index.ts'), // path.resolve(__dirname, 'src/index.js'),
+   /* lib: { // 构建为库。如果指定了 build.lib，build.cssCodeSplit 会默认为 false。
+      // __dirname的值是vite.config.ts文件所在目录
+      entry: resolve(__dirname, 'packages/TableUi/index.ts'),  // entry是必需的，因为库不能使用HTML作为入口。
+      name: 'VueReportUi', // 暴露的全局变量
+      fileName: '@lyhzwf/table-ui' // 输出的包文件名，默认是package.json的name选项
+    },*/
+
+   /* lib: {
+      entry: resolve(__dirname, 'packages/TableUi/index.ts'), // path.resolve(__dirname, 'src/index.js'),
       name: 'TableUi',
-      // fileName: (format) => `index.js`
-      fileName: (format) => `index.${format}.js`
+      fileName: (format) => `index.js`
+      // fileName: (format) => `index.${format}.js`
+    },*/
+    lib: {
+      entry: resolve(__dirname, 'packages/index.ts'),
+      name: 'TableUi',
+      formats: ['es'],
+      fileName: 'index'
     },
     rollupOptions: {
       // 确保外部化处理那些你不想打包进库的依赖

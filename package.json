@@ -1,14 +1,15 @@
 {
   "name": "@lyhzwf/table-ui",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.2",
   "type": "module",
+  "typings": "./dist/index.js",
   "files": [
     "dist"
   ],
   "license": "MIT",
   "module": "./dist/index.es.js",
-  "main": "./dist/index.umd.js",
+  "main": "./dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/liangyuhong160/table-ui.git"
