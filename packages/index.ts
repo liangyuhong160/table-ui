@@ -1,5 +1,5 @@
 import type { App } from 'vue'
-import TableUi from './TableUi/TableUi.vue'
+import TableUi from './TableUi'
 
 // 所有组件列表
 const components = [
