@@ -1,17 +1,21 @@
 <script setup lang="ts">
-// import TableUi from './../dist/index.umd.js'
+import {TableUi} from './../dist/index.js'
+// import {Form, FormItem, Input} from 'ant-design-vue'
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
+  文档
   <table-ui></table-ui>
+<!--  <a-form>-->
+<!--    <a-form-item>-->
+<!--      <a-input value="0032" placeholder="Username">-->
+<!--      </a-input>-->
+<!--    </a-form-item>-->
+<!--    <a-form-item>-->
+<!--      <a-input type="password" placeholder="Password">-->
+<!--      </a-input>-->
+<!--    </a-form-item>-->
+<!--  </a-form>-->
 </template>
 
 <style scoped>
