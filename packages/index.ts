@@ -1,5 +1,6 @@
 import type { App } from 'vue'
 import TableUi from './TableUi'
+import 'ant-design-vue/dist/antd.css'
 
 // 所有组件列表
 const components = [

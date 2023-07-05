@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import {resolve} from 'path'
 import Components from 'unplugin-vue-components/vite'
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
+// import ViteComponents, { AntDesignVueResolver } from 'vite-plugin-components';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -12,7 +13,10 @@ export default defineConfig({
       resolvers: [AntDesignVueResolver({ importStyle: 'less' })]
       // 如果需要自定义主题色，则需要配置importStyle: 'less',并安装less: npm install less --save-dev
 
-    })
+    }),
+    /*ViteComponents({
+      customComponentResolvers: [AntDesignVueResolver()],
+    }),*/
   ],
  /* build: {
     outDir: "table-ui", //输出文件名称

@@ -11,13 +11,27 @@
       </a-input>
     </a-form-item>
   </a-form>
+
 </template>
 
 <script lang="ts" setup>
 import {Form, FormItem} from 'ant-design-vue/lib/form';
 import Input from 'ant-design-vue/lib/input';
-import 'ant-design-vue/lib/form/style';
-import 'ant-design-vue/lib/input/style';
+import 'ant-design-vue/lib/form/style/css';
+import 'ant-design-vue/lib/input/style/css';
+function deepClone(obj) {
+  if (typeof obj !== 'object') return obj;
+  if (obj === null) return obj;
+  if (obj instanceof RegExp) return obj;
+  if (obj instanceof Date) return obj;
+  let newObj = new obj.constructor();
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      newObj[key] = deepClone(obj[key]);
+    }
+  }
+  return newObj;
+}
 </script>
 <script lang="ts">
 export default {
@@ -25,6 +39,7 @@ export default {
 };
 </script>
 
-<style scoped>
-
+<style lang="less" scoped>
+@import 'ant-design-vue/lib/form/style';
+@import 'ant-design-vue/lib/input/style';
 </style>
